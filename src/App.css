@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  padding: 0;
+  margin: 0;
   min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right , rgba(10,10,10,0.1),rgba(10,10,10,0.8));
+}
+.navbar{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgba(10,10,10,0.8);
+  border-bottom-left-radius: 1%;
+  border-bottom-right-radius: 50%;
+  z-index: 5;
+}
+
+.navbar .nav-items{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  margin-left: 2%;
+  max-width: 60%;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.navbar .nav-items .nav-item{
+  padding-left: 2px;
+  padding-right: 2px;
+  color: antiquewhite;
+  cursor: pointer;
+  padding-bottom: 1.5%;
+  border-bottom:  3px solid rgba(10,10,10,0);
+  transition: all 500ms;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar .nav-items .nav-item:hover{
+  color: antiquewhite;
+  padding-bottom: 1.5%;
+  border-bottom: 3px solid rgb(216, 216, 216);
+}
+.contact-links .contact-img{
+  width:5%;
+  height: 5%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.contact-links{
+  margin-top: 50px;
+}
+.navbar .nav-items .current{
+  color: rgb(235, 184, 137);
+  padding-bottom: 1.5%;
+  border-bottom: 3px solid rgb(216, 216, 216);
+}
+.about-feed{
+  user-select: none;
+  margin-bottom: 10px;
+}
+.about-feed .about-header{
+  font-size: 1.9em;
+  color: rgba(30,20,20,0.7);
+  border: 2px solid rgba(109, 82, 24, 0.8);
+  border-radius: 5%;
+  display: inline-block;
+  padding-left: 1.1%;
+  padding-right: 1.1%;
+  padding-top: 0.5%;
+  padding-bottom: 0.3%;
+  margin-bottom: 2px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.about-feed .about-description{
+  margin-top: 1%;
+  max-width: 50%;
+  font-size: 1.7em;
+  /* text-align: left; */
+}
+.about-feed .about-skills-header{
+  font-size: 1.9em;
+  margin: 0;
+  margin-bottom: 5px;
+  color: rgb(140, 224, 224);
+  border-radius: 1%;
+  display: inline-block;
+  font-weight: normal;
+  padding : 0.7%;
+  border: 1px solid rgba(7, 43, 58, 0.8);
+}
+.skill{
+  font-size: 1.2em;
+  padding: 1%;
+  border-radius: 5%;
+  border-width: 2px;
+  display: inline-block;
+  margin : 2px;
+  border-style: solid;
+  transition: all 200ms;
+  cursor: pointer;
+}
+.skill:hover{
+  background-color: rgba(200, 200, 200, 1);
+  border-color: rgba(10,10,10,0);
+}
+#home-feed-canvas{
+  position: absolute;
+}
+@media only screen and (max-width: 600px) {
+  .navbar{
+    height: 100%;
+    max-width: 50%;
+    border-radius: 0px;
+    background-color: transparent;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar #nav-burger .nav-burger-bar{
+    background-color: rgb(44, 43, 41);
+    width: 25px;
+    height: 3px;
+    transition: all 200ms;
+    margin-top: 5px;
+  }
+  .navbar #nav-burger .nav-burger-bar-dark{
+    background-color: rgb(44, 43, 41);
+    width: 25px;
+    height: 3px;
+    transition: all 200ms;
+    margin-top: 5px;
+  }
+  .navbar .nav-hidden{
+    display: none;
+  }
+  .navbar .nav-shown{
+    background-color: rgba(10,10,10,0.8);
+    padding-left: 3%;
+    padding-top: 1%;
+    margin-top: 7%;
+    min-width: 35%;
+    flex-direction: column;
+    position:absolute;
+    justify-content:space-around;
+  }
+  .navbar .nav-shown .nav-item{
+    margin-top: 5px;
+    border-bottom:  2px solid rgba(10,10,10,0);
+    width: 80%;
+  }
+  .navbar .nav-shown .nav-item:hover{
+    border-bottom: 2px solid rgb(216, 216, 216);
+  }
+  .navbar .nav-burger-cross #b1{
+    transform: rotate(45deg) translate(5px,5px);
+  }
+  .navbar .nav-burger-cross #b2{
+    transform:rotate(-45deg);
+  }
+  .navbar .nav-burger-cross #b3{
+    background-color: transparent;
+  }
+  .navbar #nav-burger{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
   }
 }
