@@ -221,7 +221,7 @@
   margin: 5%;
   transform: scale(1,1.9) translateY(-9%);
 }
-.projects-feed{
+.projects-feed,.web-games-container{
   margin-top: 10%;
   max-width: 40%;
 }
@@ -233,6 +233,25 @@
   cursor: pointer;
 }
 .projects-feed .projects-header:hover{
+  transform: scale(1.05,1.05);
+  background-color: rgba(200,200,200,0.1);
+  box-shadow: 0px 0px 10px rgba(20,20,20,0.2);
+}
+.web-games-container .games-list{
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+}
+.web-games-container a{
+  text-decoration: none;
+  font-size: 1.8em;
+  width: 100%;
+  color:rgb(255, 252, 249);
+  margin-top: 0.5%;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.web-games-container a:hover{
   transform: scale(1.05,1.05);
   background-color: rgba(200,200,200,0.1);
   box-shadow: 0px 0px 10px rgba(20,20,20,0.2);

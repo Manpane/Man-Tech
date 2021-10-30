@@ -1,4 +1,5 @@
 {
+  "proxy":"https://manoj9898.pythonanywhere.com",
   "name": "mantech-react",
   "version": "0.1.0",
   "private": true,
