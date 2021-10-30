@@ -19,8 +19,8 @@ const WebGames = () => {
             <div className={"web-games-container "+games_div_class}>
                 <div className="progress"/>
                 <div className="games-list">
-                    {games?.map((game)=>(
-                        <a className="game-link" href={`http://manoj9898.pythonanywhere.com/games/${game}.html`}>{game}</a>
+                    {games?.map((game,index)=>(
+                        <a key={index} className="game-link" href={`http://manoj9898.pythonanywhere.com/games/${game}.html`}>{game}</a>
                     ))}
                 </div>
             </div>

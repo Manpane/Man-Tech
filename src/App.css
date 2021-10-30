@@ -225,6 +225,10 @@
   margin-top: 10%;
   max-width: 40%;
 }
+.download-files-container{
+  margin-top: 10%;
+  max-width: 70%;
+} 
 .projects-feed .projects-header{
   font-size: 2em;
   color:rgb(255, 252, 249);
@@ -237,12 +241,12 @@
   background-color: rgba(200,200,200,0.1);
   box-shadow: 0px 0px 10px rgba(20,20,20,0.2);
 }
-.web-games-container .games-list{
+.web-games-container .games-list, .download-files-container .games-list{
   display: flex;
   flex-direction: column;
   max-width: 50%;
 }
-.web-games-container a{
+.web-games-container a,.download-files-container a{
   text-decoration: none;
   font-size: 1.8em;
   width: 100%;
@@ -251,7 +255,7 @@
   transition: all 300ms;
   cursor: pointer;
 }
-.web-games-container a:hover{
+.web-games-container a:hover,.download-files-container a:hover{
   transform: scale(1.05,1.05);
   background-color: rgba(200,200,200,0.1);
   box-shadow: 0px 0px 10px rgba(20,20,20,0.2);
