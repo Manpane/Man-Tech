@@ -223,11 +223,11 @@
 }
 .projects-feed,.web-games-container{
   margin-top: 10%;
-  max-width: 40%;
+  max-width: 80%;
 }
 .download-files-container{
   margin-top: 10%;
-  max-width: 70%;
+  max-width: 80%;
 } 
 .projects-feed .projects-header{
   font-size: 2em;
@@ -244,7 +244,7 @@
 .web-games-container .games-list, .download-files-container .games-list{
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 90%;
 }
 .web-games-container a,.download-files-container a{
   text-decoration: none;
@@ -319,7 +319,7 @@
     animation:slide_from_left 200ms ease;
   }
   .projects-feed .projects-header{
-    font-size: 1em;
+    font-size: 1.7em;
   }
   @keyframes slide_from_left{
     0%{

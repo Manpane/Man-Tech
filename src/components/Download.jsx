@@ -5,13 +5,17 @@ const Downloads = () => {
     const [files , setFiles] = useState([]);
     const [loadStatus, setLoadStatus] = useState("loading");
     useEffect(()=>{
-        axios.get("https://manoj9898.pythonanywhere.com/api/downloads").then(
+        axios.get("/mantech_api/downloads").then(
             (response)=>{
                 setFiles(response.data.files);
                 console.log(response);
                 setLoadStatus("loaded");
             }
-        ).catch(error=>console.log(error))
+        ).catch(error=>{
+            console.log(error);
+            setFiles(["Couldn't load files..."])
+            setLoadStatus("loaded");
+        })
     },[]);
     return ( 
         <center>

@@ -4,7 +4,7 @@ const WebGames = () => {
     const [games , setGames] = useState([]);
     const [games_div_class, setGamesDivClass] = useState("loading");
     useEffect(()=>{
-        axios.get('https://manoj9898.pythonanywhere.com/api/webgames').then(response => {
+        axios.get('/mantech_api/webgames').then(response => {
             console.log("Response : ",response);
             if (response){
                 setGames(response.data.games);
@@ -12,6 +12,8 @@ const WebGames = () => {
             }
         }).catch(error=>{
             console.log("Error : ",error);
+            setGames(["Couldn't load games..."])
+            setGamesDivClass("loaded");
         });
     },[]);
     return ( 
