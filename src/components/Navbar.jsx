@@ -29,7 +29,7 @@ const Navbar = (props) =>{
             </div>
             <div className={`nav-items ${nav_item_class}`} >
                 <div className={(props.current==="home") ? "nav-item current" : "nav-item"} id="nav-home" onClick = {()=>{handleNavigationChange("home")}} >Home</div>
-                <div className={(props.current==="my_projects") ? "nav-item current" : "nav-item"} id="nav-projects" onClick = {()=>{handleNavigationChange("my_projects")}}>My Projects</div>
+                <div className={(props.current==="my_projects" || props.current==="web_games" || props.current==="downloads" || props.current==="other_websites") ? "nav-item current" : "nav-item"} id="nav-projects" onClick = {()=>{handleNavigationChange("my_projects")}}>My Projects</div>
                 <div className={(props.current==="about") ? "nav-item current" : "nav-item"} id="nav-about" onClick = {()=>{handleNavigationChange("about")}}>About</div>
                 <div className={(props.current==="contacts") ? "nav-item current" : "nav-item"} id="nav-contacts" onClick = {()=>{handleNavigationChange("contacts")}}>Contacts</div>
             </div>

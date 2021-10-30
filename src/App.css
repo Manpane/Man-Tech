@@ -1,10 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+@keyframes nav-anim{
+  0%{
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes bounce_and_settle{
+  0%{
+    margin-top: -500%;
+  }
+  20%{
+    transform: scale(0.8,1.2);
+    margin-top: -200%;
+  }
+  30%{
+    transform: scale(0.7,1.3);
+    margin-top: -80%;
+  }
+  45%{
+    transform: scale(1,1);
+    margin-top: 0%;
+  }
+  75%{
+    transform: scale(1,1);
+    margin-top: 0%;
+  }
+  80%{
+    transform: scale(1.1,0.9);
+    margin-top: -50%;
+  }
+  100%{
+    transform: scale(1,1);
+    margin-top: 0%;
+  }
+}
+@keyframes fade_in{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes indeterminate_progress{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 .App{
   padding: 0;
   margin: 0;
   min-height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-image: linear-gradient(to bottom right , rgba(10,10,10,0.1),rgba(10,10,10,0.8));
+  background-color:rgba(10,10,10,0.4);
+  background-image: linear-gradient(
+    135deg,
+    rgba(10,10,10,0.1),
+    rgba(10,10,10,0.8)
+  );
 }
 .navbar{
   margin: 0;
@@ -14,8 +78,8 @@
   border-bottom-left-radius: 1%;
   border-bottom-right-radius: 50%;
   z-index: 5;
+  animation: nav-anim 500ms ease;
 }
-
 .navbar .nav-items{
   display: flex;
   padding-top: 3%;
@@ -45,6 +109,7 @@
   margin-right: 15px;
 }
 .contact-links{
+  animation: fade_in 700ms;
   margin-top: 50px;
 }
 .navbar .nav-items .current{
@@ -53,13 +118,13 @@
   border-bottom: 3px solid rgb(216, 216, 216);
 }
 .about-feed{
-  user-select: none;
+  animation: fade_in 500ms;
   margin-bottom: 10px;
+  color: rgb(201, 201, 201);
 }
 .about-feed .about-header{
   font-size: 1.9em;
-  color: rgba(30,20,20,0.7);
-  border: 2px solid rgba(109, 82, 24, 0.8);
+  color: #bbeecc;
   border-radius: 5%;
   display: inline-block;
   padding-left: 1.1%;
@@ -67,25 +132,30 @@
   padding-top: 0.5%;
   padding-bottom: 0.3%;
   margin-bottom: 2px;
+  font-weight: 200;
+  border:1px ridge rgba(200,200,200,1);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
 }
 .about-feed .about-description{
   margin-top: 1%;
   max-width: 50%;
   font-size: 1.7em;
-  /* text-align: left; */
 }
 .about-feed .about-skills-header{
   font-size: 1.9em;
   margin: 0;
   margin-bottom: 5px;
-  color: rgb(140, 224, 224);
-  border-radius: 1%;
+  color: #bbeecc;
+  border-radius: 5%;
   display: inline-block;
   font-weight: normal;
   padding : 0.7%;
-  border: 1px solid rgba(7, 43, 58, 0.8);
+  font-weight: 150;
+  border: 1px ridge rgba(200,200,200,1);
+  cursor: pointer;
 }
+
 .skill{
   font-size: 1.2em;
   padding: 1%;
@@ -100,16 +170,102 @@
 .skill:hover{
   background-color: rgba(200, 200, 200, 1);
   border-color: rgba(10,10,10,0);
+  color: black;
 }
-#home-feed-canvas{
+.home-feed-container{
+  align-items: center;
+  animation: fade_in 500ms;
+}
+.home-feed-container .description{
+  font-size: 1.7em;
+  font-style: bold;
+  color: rgb(201, 201, 201);
+  margin-left: 1%;
+  margin-top: 1%;
+  max-width: 70%;
+}
+.home-feed-container{
+  animation: fade_in 500ms;
+  display: flex;
+  justify-content: left;
+  padding:1.5%;
+}
+.home-feed-container .mantech-logo .logo,.logo-shadow{
+  width: 100%;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 200ms;
+  cursor: pointer;
+}
+.home-feed-container .mantech-logo .logo:hover{
+  transform: scale(1.1,1.1);
+}
+.home-feed-container .mantech-logo .logo .mantech,.logo-shadow .mantech{
+  font-size: 2em;
+  font-weight: 600;
+  font-family:  'Baloo Bhai 2', cursive;
+  margin: 0px;
+  padding: 0px;
+}
+.home-feed-container .mantech-logo .logo .brackets , .logo-shadow .brackets{
+  font-size: 2.7em;
+  font-weight: 700;
+  margin: 0px;
+  padding: 5px;
+  padding-top: 0%;
+  display: flex;
+}
+.home-feed-container .mantech-logo .logo .brackets .bracket, .logo-shadow .brackets .bracket{
+  margin: 5%;
+  transform: scale(1,1.9) translateY(-9%);
+}
+.projects-feed{
+  margin-top: 10%;
+  max-width: 40%;
+}
+.projects-feed .projects-header{
+  font-size: 2em;
+  color:rgb(255, 252, 249);
+  margin-top: 0.5%;
+  transition: all 300ms;
+  cursor: pointer;
+}
+.projects-feed .projects-header:hover{
+  transform: scale(1.05,1.05);
+  background-color: rgba(200,200,200,0.1);
+  box-shadow: 0px 0px 10px rgba(20,20,20,0.2);
+}
+.loading .progress{
   position: absolute;
+  top: 45%;
+  right: 45%;
+  bottom: 45%;
+  left: 45%;
+  width: 50px;
+  height:50px;
+  border-radius: 50%;
+  border-bottom: 2px solid rgb(255,255,255);
+  border-top: 2px solid rgb(235, 184, 137);
+  animation: indeterminate_progress 1s infinite;
 }
-@media only screen and (max-width: 600px) {
+.loaded .progress{
+  display: none;
+}
+@media only screen and (max-width: 700px) {
   .navbar{
     height: 100%;
     max-width: 50%;
     border-radius: 0px;
     background-color: transparent;
+  }
+  .home-feed-container{
+    animation: fade_in 500ms;
+    flex-direction: column-reverse;
+  }
+  .home-feed-container .mantech-logo{
+    max-width: 50%;
   }
   .navbar #nav-burger .nav-burger-bar{
     background-color: rgb(44, 43, 41);
@@ -132,11 +288,20 @@
     background-color: rgba(10,10,10,0.8);
     padding-left: 3%;
     padding-top: 1%;
-    margin-top: 7%;
+    margin-top: 7.5%;
     min-width: 35%;
     flex-direction: column;
     position:absolute;
-    justify-content:space-around;
+    justify-content:space-between;
+    animation:slide_from_left 200ms ease;
+  }
+  @keyframes slide_from_left{
+    0%{
+      margin-left:-50%
+    }
+    100%{
+      margin-left:0%
+    }
   }
   .navbar .nav-shown .nav-item{
     margin-top: 5px;

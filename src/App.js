@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import {useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Feed from './components/Feed';
 function App() {
-  const [current, setCurrentFeed] = useState("home")
+  let curr = localStorage.getItem("current");
+  if (curr===null){curr="home";}
+  const [current, setCurrentFeed] = useState(curr);
   const handleNavigationChange = (seletedNav) => {
     setCurrentFeed(seletedNav);
+    localStorage.setItem("current",seletedNav);
   }
   return (
     <div className="App">
       <Navbar current={current} onNavigationChanged={handleNavigationChange}></Navbar>
-      <Feed current={current} />
+      <Feed current={current} onNavigationChanged={handleNavigationChange} />
     </div>
   );
 }
