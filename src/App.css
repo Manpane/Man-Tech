@@ -295,6 +295,9 @@
     justify-content:space-between;
     animation:slide_from_left 200ms ease;
   }
+  .projects-feed .projects-header{
+    font-size: 1em;
+  }
   @keyframes slide_from_left{
     0%{
       margin-left:-50%
