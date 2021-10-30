@@ -5,7 +5,7 @@ const Downloads = () => {
     const [files , setFiles] = useState([]);
     const [loadStatus, setLoadStatus] = useState("loading");
     useEffect(()=>{
-        axios.get("/mantech_api/downloads").then(
+        axios.get("https://manoj9898.pythonanywhere.com/mantech_api/downloads").then(
             (response)=>{
                 setFiles(response.data.files);
                 console.log(response);

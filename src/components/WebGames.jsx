@@ -4,7 +4,7 @@ const WebGames = () => {
     const [games , setGames] = useState([]);
     const [games_div_class, setGamesDivClass] = useState("loading");
     useEffect(()=>{
-        axios.get('/mantech_api/webgames').then(response => {
+        axios.get('https://manoj9898.pythonanywhere.com/mantech_api/webgames').then(response => {
             console.log("Response : ",response);
             if (response){
                 setGames(response.data.games);
