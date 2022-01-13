@@ -245,6 +245,8 @@
   display: flex;
   flex-direction: column;
   max-width: 90%;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .web-games-container a,.download-files-container a{
   text-decoration: none;
