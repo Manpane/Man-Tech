@@ -1,7 +1,7 @@
 import fb_logo from '../fb_logo.png';
 import github_logo from '../github_logo.png';
 import gmail_logo from '../gmail_logo.png';
-import youtube_logo from '../youtube_logo.jpg';
+import youtube_logo from '../youtube_logo.png';
 const ContactFeed = () => {
     return ( 
         <div className="contact-feed-container">
