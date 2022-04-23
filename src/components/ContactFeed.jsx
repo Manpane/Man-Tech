@@ -1,6 +1,7 @@
 import fb_logo from '../fb_logo.png';
 import github_logo from '../github_logo.png';
 import gmail_logo from '../gmail_logo.png';
+import youtube_logo from '../youtube_logo.jpg';
 const ContactFeed = () => {
     return ( 
         <div className="contact-feed-container">
@@ -15,6 +16,9 @@ const ContactFeed = () => {
                 </a>
                 <a id="contact-gmail" href="mailto:manpane98@gmail.com" target="_blank" rel="noreferrer">
                     <img className="contact-gmail-img contact-img" src={gmail_logo} alt="gmail"/>
+                </a>
+                <a id="contact-youtube" href="https://www.youtube.com/channel/UC2PZjoVt8EzCM75KIQtiDzQ?sub_confirmation=1" target="_blank" rel="noreferrer">
+                    <img className="contact-youtube-img contact-img" src={youtube_logo} alt="youtube"/>
                 </a>
                 <h4>Thanks for visiting my website</h4>
                 </center>
