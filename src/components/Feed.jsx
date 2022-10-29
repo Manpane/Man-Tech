@@ -25,8 +25,8 @@ const Feed = (props) => {
                     'height' : 90,
                     'width' : 728,
                     'params' : {}
-                };
-                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/fbb76e8124928fd359f27a24ba71392b/invoke.js"></scr' + 'ipt>');
+                }
+                document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/fbb76e8124928fd359f27a24ba71392b/invoke.js"></scr' + 'ipt>')
              }
              {getCorrectFeed()}
         </div>
