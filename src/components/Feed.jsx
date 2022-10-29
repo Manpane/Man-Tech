@@ -18,17 +18,7 @@ const Feed = (props) => {
     }
     return (
         <div>
-            {
-                atOptions = {
-                    'key' : 'fbb76e8124928fd359f27a24ba71392b',
-                    'format' : 'iframe',
-                    'height' : 90,
-                    'width' : 728,
-                    'params' : {}
-                }
-                document.write(`<script  type="text/javascript" src="http${location.protocol === 'https:' ? 's' : ''}//www.highperformancedisplayformat.com/fbb76e8124928fd359f27a24ba71392b/invoke.js"></script>`)
-//                 document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/fbb76e8124928fd359f27a24ba71392b/invoke.js"></scr' + 'ipt>')
-             }
+            
              {getCorrectFeed()}
         </div>
     );
