@@ -57,6 +57,14 @@
     transform: rotate(360deg);
   }
 }
+body{
+  background-color:rgba(10,10,10,0.4);
+  background-image: linear-gradient(
+    135deg,
+    rgba(10,10,10,0.1),
+    rgba(10,10,10,0.8)
+  );
+}
 .App{
   padding: 0;
   margin: 0;
