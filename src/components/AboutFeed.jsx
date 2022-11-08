@@ -11,21 +11,21 @@ const AboutFeed = (props) => {
                 </p>
                 <h4 className="about-skills-header">My skills</h4>
                 <div className="about-skills-container skills-programming-languages">
-                    <div className="skill python">Python</div>
-                    <div className="skill rd">Java</div>
-                    <div className="skill ylw">Javascript</div>
-                    <div className="skill org">HTML</div>
-                    <div className="skill lt_grn">CSS</div>
-                    <div className="skill skbl">C/C++</div>
-                    <div className="skill skbl">SQL</div>
+                    <div className="skill python"><a href="https://www.python.org/" target="_blank" >Python</a></div>
+                    <div className="skill rd"><a href="https://www.java.com/en/" target="_blank">Java</a></div>
+                    <div className="skill ylw"><a href="https://www.google.com/search?q=javascript" target="_blank">Javascript</a></div>
+                    <div className="skill org"><a href="https://www.google.com/search?q=html" target="_blank">HTML</a></div>
+                    <div className="skill lt_grn"><a href="https://www.google.com/search?q=css" target="_blank">CSS</a></div>
+                    <div className="skill skbl"><a href="https://www.google.com/search?q=C%2FC%2B%2B" target="_blank">C/C++</a></div>
+                    <div className="skill skbl"><a href="https://www.google.com/search?q=SQL" target="_blank">SQL</a></div>
                 </div>
                 <div className="about-skills-container skills-platforms">
-                    <div className="skill">Android Development</div>
-                    <div className="skill">Web Development</div>
-                    <div className="skill">Game Development</div>
+                    <div className="skill"><a href="https://developer.android.com/" target="_blank">Android Development</a></div>
+                    <div className="skill"><a href="https://www.google.com/search?q=web+development" target="_blank">Web Development</a></div>
+                    <div className="skill"><a href="https://www.google.com/search?q=game+development" target="_blank">Game Development</a></div>
                     <br/>
-                    <div className="skill">Web Scraping</div>
-                    <div className="skill">Automtation</div>
+                    <div className="skill"><a href="https://www.google.com/search?q=web+scrapping" target="_blank">Web Scraping</a></div>
+                    <div className="skill"><a href="https://www.google.com/search?q=automation" target="_blank">Automtation</a></div>
                 </div>
             </center>
         </div>
