@@ -1,10 +1,11 @@
 const AboutFeed = (props) => {
+    let age = new Date().getFullYear()-2003;
     return (  
         <div className="about-feed">
             <center>
                  <h2 className="about-header">About Me</h2>
                  <br/>
-                 <p className="about-description">Hello there! My name is Manoj Neupane and I am a 18 year old guy who loves programming.
+                 <p className="about-description">Hello there! My name is Manoj Neupane and I am a {age} year old guy who loves programming.
                     I enjoy creating applications and websites. I am from Nepal.
                 </p>
                 <p className="about-description" style={{fontSize:18}}>I created this website from scratch with <big>React</big> for front-end and <big>Python Flask</big> for backend. 
