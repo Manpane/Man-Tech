@@ -144,7 +144,7 @@
 }
 .about-feed .about-description{
   margin-top: 1%;
-  max-width: 85%;
+  max-width: 60%;
   font-size: 1.7em;
 }
 .about-feed .about-skills-header{
@@ -372,5 +372,8 @@
     top: 70px;
     left: 10px;
     cursor: pointer;
+  }
+  .about-feed .about-description{
+    max-width: 90%;
   }
 }
