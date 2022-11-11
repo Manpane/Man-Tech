@@ -177,6 +177,14 @@
   border-color: rgba(10,10,10,0);
   color: black;
 }
+.skill a{
+  text-decoration:none;
+  color: rgb(201, 201, 201);
+}
+.skill:hover > a{
+  color: black;
+}
+
 .home-feed-container{
   align-items: center;
   animation: fade_in 500ms;
