@@ -2,17 +2,17 @@ import { useState } from "react";
 
 const Navbar = (props) =>{
     const [nav_item_class,set_nav_item_class] = useState("nav-hidden");
-    const [navBurgerBar,setNavBurgerBar] = useState("nav-burger-bar-dark");
+    const [navBurgerBar,setNavBurgerBar] = useState("nav-burger-bar-light");
     const [navBurgerClass,setNavBurgerClass] = useState("");
     const handleBurgerClicked = () => {
         if (nav_item_class==="nav-hidden"){
             set_nav_item_class("nav-shown");
-            setNavBurgerBar("nav-burger-bar");
+            setNavBurgerBar("nav-burger-bar-light");
             setNavBurgerClass("nav-burger-cross");
         }
         else{ 
             set_nav_item_class("nav-hidden");
-            setNavBurgerBar("nav-burger-bar-dark");
+            setNavBurgerBar("nav-burger-bar-light");
             setNavBurgerClass("");
         }
     }
