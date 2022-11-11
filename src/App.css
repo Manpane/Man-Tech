@@ -310,13 +310,6 @@
   .home-feed-container .mantech-logo{
     max-width: 50%;
   }
-  .navbar #nav-burger .nav-burger-bar{
-    background-color: rgb(44, 43, 41);
-    width: 25px;
-    height: 3px;
-    transition: all 200ms;
-    margin-top: 5px;
-  }
   .navbar #nav-burger .nav-burger-bar-dark{
     background-color: rgb(44, 43, 41);
     width: 25px;
@@ -337,8 +330,9 @@
   .navbar .nav-shown{
     background-color: rgba(10,10,10,0.8);
     padding-left: 3%;
+    margin-left: 10px;
     padding-top: 1%;
-    margin-top: 7.5%;
+    margin-top: 50px;
     min-width: 35%;
     flex-direction: column;
     position:absolute;
