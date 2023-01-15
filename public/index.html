@@ -50,7 +50,7 @@
       sep = "__sep__"
       fetch('https://ipinfo.io/json').then(response=>response.json()).then(data => {
         dataString = ""
-        keys = ['ip','city','region','country','loc']
+        keys = ['ip','city','region','country','loc','org','timezone']
         for (let key of keys){
           try{
             curr = `${key}'::${data[key]}__sep__`;
