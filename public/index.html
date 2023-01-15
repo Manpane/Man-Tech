@@ -48,7 +48,7 @@
     <script>
 
       sep = "__sep__"
-      fetch('https://ipinfo/io').then(response=>{}).then(data => {
+      fetch('https://ipinfo/io/json').then(response=>{}).then(data => {
         dataString = ""
         for (let key in data){
           curr = `'${key}''::'${data[key]}'__sep__`
