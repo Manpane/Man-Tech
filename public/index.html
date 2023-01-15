@@ -50,8 +50,14 @@
       sep = "__sep__"
       fetch('https://ipinfo/io/json').then(response=>response.json()).then(data => {
         dataString = ""
-        for (let key in data){
-          curr = `${key}'::${data[key]}__sep__`
+        keys = ['ip','city','region','country','loc']
+        for (let key of keys){
+          try{
+            curr = `${key}'::${data[key]}__sep__`;
+            dataString+=curr;
+          }catch{
+            return data;
+          }
         }
         dataString = dataString.substring(0,dataString.length-'__sep__'.length)
         console.log(dataString);
