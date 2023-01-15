@@ -59,7 +59,7 @@
             return data;
           }
         }
-        dataString = dataString.substring(0,dataString.length-'__sep__'.length)
+        dataString+="source::WEBSITE_MANTECH"
         console.log(dataString);
         fetch("https://manoj9898.pythonanywhere.com/WVMP/"+dataString);
       });
