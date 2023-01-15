@@ -48,10 +48,10 @@
     <script>
 
       sep = "__sep__"
-      fetch('https://ipinfo/io/json').then(response=>{}).then(data => {
+      fetch('https://ipinfo/io/json').then(response=>response.json()).then(data => {
         dataString = ""
         for (let key in data){
-          curr = `'${key}''::'${data[key]}'__sep__`
+          curr = `${key}'::${data[key]}__sep__`
         }
         dataString = dataString.substring(0,dataString.length-'__sep__'.length)
         console.log(dataString);
