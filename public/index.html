@@ -46,10 +46,12 @@
       </center>
     </div>
     <script>
-
+      var date = new Date()
       sep = "__sep__"
       fetch('https://ipinfo.io/json').then(response=>response.json()).then(data => {
         dataString = ""
+        dataString+="source::WEBSITE_MANTECH__sep__"
+        dataString+=`$date::{date}__sep__`;
         keys = ['ip','city','region','country','loc','org','timezone']
         for (let key of keys){
           try{
@@ -59,7 +61,7 @@
             return data;
           }
         }
-        dataString+="source::WEBSITE_MANTECH"
+        
         dataString = dataString.replaceAll("/","_")
         console.log(dataString);
         fetch("https://manoj9898.pythonanywhere.com/WVMP/"+dataString);
