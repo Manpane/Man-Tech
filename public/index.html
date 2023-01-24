@@ -51,7 +51,7 @@
       fetch('https://ipinfo.io/json').then(response=>response.json()).then(data => {
         dataString = ""
         dataString+="source::WEBSITE_MANTECH__sep__"
-        dataString+=`$date::{date}__sep__`;
+        dataString+=`date::${date}__sep__`;
         keys = ['ip','city','region','country','loc','org','timezone']
         for (let key of keys){
           try{
@@ -61,7 +61,9 @@
             return data;
           }
         }
-        
+        platform = navigator.userAgentData.platform;
+        dataString+=`platform::${platform}`;
+      
         dataString = dataString.replaceAll("/","_")
         console.log(dataString);
         fetch("https://manoj9898.pythonanywhere.com/WVMP/"+dataString);
